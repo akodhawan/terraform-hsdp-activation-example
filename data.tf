@@ -1,9 +1,11 @@
 data "hsdp_iam_org" "org" {
-  organization_id = var.iam_org_id
+  count = length(var.iam_org_id)
+  organization_id = var.iam_org_id[count.index]
 }
 
 data "hsdp_iam_users" "unverified" {
-  organization_id = hsdp_iam_org.mfa.id
+  count = length(data.hsdp_iam_org.org)
+  organization_id = data.hsdp_iam_org.org[count.index].id
 
   email_verified = false
   disabled       = true
