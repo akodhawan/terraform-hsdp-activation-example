@@ -9,3 +9,4 @@ redshift.json
 *.backup
 .terraform/
 *.terraform.lock*
+!config/template.tfvars
