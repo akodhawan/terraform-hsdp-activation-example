@@ -1,6 +1,6 @@
 data "hsdp_iam_org" "org" {
-  count = length(var.iam_org_id)
-  organization_id = var.iam_org_id[count.index]
+  count = length(var.iam_org_ids)
+  organization_id = var.iam_org_ids[count.index]
 }
 
 data "hsdp_iam_users" "unverified" {

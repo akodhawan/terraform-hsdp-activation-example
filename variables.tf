@@ -9,7 +9,7 @@ variable "environment" {
   default     = "client-test"
 }
 
-variable "iam_org_id" {
+variable "iam_org_ids" {
   type        = list(string)
   description = "IAM Org ID"
   default = []
