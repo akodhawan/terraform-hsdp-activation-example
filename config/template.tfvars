@@ -1,0 +1,9 @@
+iam_oauth2_client_id   = ""
+iam_oauth2_client_password    = ""
+org_admin_username = ""
+org_admin_password = ""
+region             = ""
+environment         = ""
+iam_org_ids = [""]
+iam_secret_key = ""
+iam_shared_key = ""

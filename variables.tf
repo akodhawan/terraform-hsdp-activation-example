@@ -9,9 +9,10 @@ variable "environment" {
   default     = "client-test"
 }
 
-variable "iam_org_id" {
-  type        = string
+variable "iam_org_ids" {
+  type        = list(string)
   description = "IAM Org ID"
+  default = []
 }
 
 variable "iam_shared_key" {
@@ -42,5 +43,3 @@ variable "iam_oauth2_client_password" {
   description = "IAM Oauth2 client password"
 }
 
-variable "test_login" {}
-variable "test_email" {}
